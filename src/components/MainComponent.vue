@@ -7,7 +7,11 @@
         </div>
         <hr>
         <div class="box-button container d-flex justify-content-center mt-5">
-            <button class="btn text-uppercase fw-semibold" @click="discoverNow" v-if="!this.visible">discover now</button>
+            <button class="btn text-uppercase fw-semibold" @click="discoverNow" v-if="!this.visible && !this.loading">discover now</button>
+        </div>
+        <div class="loading d-flex justify-content-center align-items-center" v-if="this.loading">
+            <LoadingComponent />
+            <span class="text-white text-capitalize">loading...</span>
         </div>
         <div class="container">
             <div class="row" v-if="this.visible">
@@ -21,23 +25,30 @@
 <script>
 import {store} from '../data/store.js'
 import HeroComponent from './HeroComponent.vue';
+import LoadingComponent from './LoadingComponent.vue'
 import CardComponent from './CardComponent.vue';
     export default {
         name: 'MainComponent',
         components: {
             CardComponent,
-            HeroComponent
+            HeroComponent,
+            LoadingComponent
         },
         data() {
             return {
                 store,
-                visible: false
+                visible: false,
+                loading: false
             }
         },
         methods: {
             discoverNow() {
-                this.visible = true;
-            }
+                this.loading = true;
+                setTimeout(() => {
+                    this.visible = true;
+                    this.loading = false;
+                },3000)
+            },
         }
     }
 </script>

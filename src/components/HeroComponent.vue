@@ -7,6 +7,7 @@
             <img src="/image/logo-hero.png" alt="">
         </div>
         <h1 class="text-white text-uppercase pt-3">available soon!</h1>
+        <h3 class="arrow-down"><i class="fa-solid fa-angles-down text-white"></i></h3>
     </div>
 </template>
 
@@ -33,5 +34,10 @@
         z-index: 1;
         width: 500px;
         height: 250px;
+    }
+    @media screen and (min-width: 768px) {
+        .arrow-down{
+            display: none;
+        }
     }
 </style>

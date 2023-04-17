@@ -18,7 +18,7 @@
 
 <style lang="scss" scoped>
     .hero{
-        margin-bottom: 150px;;
+        margin-bottom: 70px;
     }
     .box-image{
         min-width: 1200px;

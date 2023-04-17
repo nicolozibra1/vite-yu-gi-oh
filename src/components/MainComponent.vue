@@ -13,6 +13,7 @@
             <LoadingComponent />
             <span class="text-white text-capitalize">loading...</span>
         </div>
+        <SearchComponent v-if="this.visible" />
         <div class="container">
             <div class="row" v-if="this.visible">
                 <CardComponent v-for="(card, index) in store.cardList" :card="card" :key="card.id" :id="card.id" />
@@ -25,13 +26,15 @@
 <script>
 import {store} from '../data/store.js'
 import HeroComponent from './HeroComponent.vue';
-import LoadingComponent from './LoadingComponent.vue'
+import LoadingComponent from './LoadingComponent.vue';
+import SearchComponent from './SearchComponent.vue';
 import CardComponent from './CardComponent.vue';
     export default {
         name: 'MainComponent',
         components: {
             CardComponent,
             HeroComponent,
+            SearchComponent,
             LoadingComponent
         },
         data() {

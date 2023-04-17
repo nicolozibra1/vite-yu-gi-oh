@@ -1,4 +1,5 @@
-# .
+# Live site
+https://vite-yu-gi-oh-six.vercel.app/
 
 This template should help get you started developing with Vue 3 in Vite.
 

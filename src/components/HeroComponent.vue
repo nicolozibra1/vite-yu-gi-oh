@@ -6,6 +6,7 @@
         <div class="box-logo">
             <img src="image/logo-hero.png" alt="">
         </div>
+        <h1 class="text-white text-uppercase pt-3">available soon!</h1>
     </div>
 </template>
 

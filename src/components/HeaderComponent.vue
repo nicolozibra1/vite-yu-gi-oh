@@ -1,7 +1,7 @@
 <template>
     <header class="d-flex align-items-center">
         <div class="box-logo ms-3">
-            <img src="image/logo.webp" alt="logo">
+            <img src="image/logo.svg" alt="logo">
         </div>
     </header>
 </template>

@@ -1,10 +1,10 @@
 <template>
     <div class="hero d-flex flex-column align-items-center">
         <div class="box-image">
-            <img src="image/mainvisual-monster.png" alt="">
+            <img src="/image/mainvisual-monster.png" alt="">
         </div>
         <div class="box-logo">
-            <img src="image/logo-hero.png" alt="">
+            <img src="/image/logo-hero.png" alt="">
         </div>
         <h1 class="text-white text-uppercase pt-3">available soon!</h1>
     </div>

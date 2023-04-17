@@ -1,6 +1,8 @@
 <template>
-    <header>
-        <h1 class="text-white text-center mt-4">Yu-Gi-Oh!</h1>
+    <header class="d-flex align-items-center">
+        <div class="box-logo ms-3">
+            <img src="image/logo.webp" alt="logo">
+        </div>
     </header>
 </template>
 
@@ -11,5 +13,20 @@
 </script>
 
 <style lang="scss" scoped>
+    header{
+        height: 50px;
 
+        .box-logo{
+            height: 40px;
+            width: 120px;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .debug{
+        border: 1px solid red;
+    }
 </style>

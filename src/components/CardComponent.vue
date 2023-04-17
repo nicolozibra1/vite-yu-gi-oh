@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
         <div class="card mb-4 bg-transparent">
             <div class="card-image" v-for="(item, i) in card.card_images" :key="i">
                 <img :src="item.image_url" alt="">

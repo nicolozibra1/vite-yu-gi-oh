@@ -6,7 +6,7 @@
             <span class="text-white fw-semibold"> ->> Discover exclusive sneak peeks of some of the cards that will be featured in the Z-Series!</span>
         </div>
         <hr>
-        <div class="box-button container d-flex justify-content-center mt-3">
+        <div class="box-button container d-flex justify-content-center">
             <button class="btn text-uppercase fw-semibold" @click="discoverNow" v-if="!this.visible && !this.loading">discover now</button>
         </div>
         <div class="loading d-flex justify-content-center align-items-center" v-if="this.loading">
@@ -58,18 +58,23 @@ import CardComponent from './CardComponent.vue';
         height: 3px;
         color: white;
     }
-    button{
-        color: white;
-        background-color: #2646ce;
-        box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 38px, rgba(255, 255, 255, 0.22) 0px 3px 10px;
+    .box-button{
+        margin-top: 60px;
+        button{
+            color: white;
+            background-color: #2646ce;
+            box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 38px, rgba(255, 255, 255, 0.22) 0px 3px 10px;
 
-        &:hover{
-            background-color: white;
-            color: black;
+            &:hover{
+                background-color: white;
+                color: black;
+            }
         }
     }
+    
     @media screen and (max-width: 768px) {
         .box-button, .loading{
+            margin-top: 0;
             margin-bottom: 20px;
         }
     }

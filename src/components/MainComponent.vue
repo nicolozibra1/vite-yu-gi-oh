@@ -6,8 +6,11 @@
             <span class="text-white fw-semibold"> ->> Discover exclusive sneak peeks of some of the cards that will be featured in the Z-Series!</span>
         </div>
         <hr>
+        <div class="box-button container d-flex justify-content-center mt-5">
+            <button class="btn text-uppercase fw-semibold" @click="discoverNow" v-if="!this.visible">discover now</button>
+        </div>
         <div class="container">
-            <div class="row">
+            <div class="row" v-if="this.visible">
                 <CardComponent v-for="(card, index) in store.cardList" :card="card" :key="card.id" :id="card.id" />
             </div>
     </div>
@@ -28,6 +31,12 @@ import CardComponent from './CardComponent.vue';
         data() {
             return {
                 store,
+                visible: false
+            }
+        },
+        methods: {
+            discoverNow() {
+                this.visible = true;
             }
         }
     }
@@ -37,5 +46,15 @@ import CardComponent from './CardComponent.vue';
     hr{
         height: 3px;
         color: white;
+    }
+    button{
+        color: white;
+        background-color: #2646ce;
+        box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 38px, rgba(255, 255, 255, 0.22) 0px 3px 10px;
+
+        &:hover{
+            background-color: white;
+            color: black;
+        }
     }
 </style>

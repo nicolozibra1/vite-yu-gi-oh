@@ -81,10 +81,30 @@
             img{
                 overflow-y: visible;
                 scale: 2;
-                margin-top: 50px;
-                height: 200px;
+                height: 180px;
                 margin-top: 100px;
             }
+        }
+        .box-logo{
+            margin-top: -180px;
+        }
+    }
+    @media screen and (max-width: 520px) {
+        .box-image{
+            width: 100%;
+            height: 500px;
+
+            img{
+                overflow-y: visible;
+                scale: 2;
+                height: 160px;
+                margin-top: 100px;
+            }
+        }
+        .box-logo{
+            margin-top: -180px;
+            width: 100%;
+            height: 200px;
         }
     }
 </style>

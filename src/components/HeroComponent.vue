@@ -22,12 +22,13 @@
         margin-bottom: 40px;
     }
     .box-image{
-        min-width: 1200px;
+        width: 1200px;
         position: relative;
     }
     img{
         width: 100%;
         height: 100%;
+        overflow: hidden;
     }
     .box-logo{
         margin-top: -150px;
@@ -38,6 +39,52 @@
     @media screen and (min-width: 768px) {
         .arrow-down{
             display: none;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .box-image{
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .box-image{
+            width: 100%;
+            overflow: hidden;
+
+            img{
+                scale: 1.2;
+                overflow: hidden;
+                margin-top: 30px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .box-image{
+            width: 100%;
+            height: 500px;
+
+            img{
+                scale: 1.5;
+                overflow: hidden;
+                margin-top: 70px;
+                height: 250px;
+                margin-top: 70px;
+            }
+        }
+    }
+    @media screen and (max-width: 576px) {
+        .box-image{
+            width: 100%;
+            height: 500px;
+
+            img{
+                overflow-y: visible;
+                scale: 2;
+                margin-top: 50px;
+                height: 200px;
+                margin-top: 100px;
+            }
         }
     }
 </style>
